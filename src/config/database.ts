@@ -10,3 +10,12 @@ export async function initDatabase() {
     }
 }
 
+const userSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  image: String,
+  score: Number,
+});
+
+export const Users = mongoose.model("Users", userSchema);
+
